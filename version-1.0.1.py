@@ -30,16 +30,16 @@ class Yadrif:
         return today.strftime("Today is %B %d, %Y")
 
     def greet(self):
-        return "Hello! How can I assist you today?"
+        return "Hello! How can I assist you ?"
 
     def shutdown(self):
-        return "Shutting down yadrif"
+        return "Shutting down Yadrif"
 
     def response(self, input_text):
         for command in self.commands:
             if command in input_text.lower():
                 return self.commands[command]()
-        return "Sorry, searching from online sources."
+        return "Sorry, searching for other sources from the source."
 
     def run(self):
         print("Activating yadrif services")
