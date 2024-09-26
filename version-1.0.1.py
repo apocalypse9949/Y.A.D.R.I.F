@@ -11,13 +11,13 @@ class Yadrif:
             "music_info": self.get_music_info
         }
 
-        self.music_df = pd.read_csv('ClassicHit.csv') # using panda to read the data from CSV data file
+        self.music_df = pd.read_csv('ClassicHit.csv')   # using panda to read the data from CSV data file
 
     def get_music_info(self):
-        track_name = input("Enter the track name: ").title() #searching CSV file by header called title
-        if track_name in self.music_df['Track'].values: #extracting values in header called Track from the file
-            track_data = self.music_df[self.music_df['Track'] == track_name] # if track meets the title called track_name 
-            return track_data # getting track data
+        track_name = input("Enter the track name: ").title()    #searching CSV file by header called title
+        if track_name in self.music_df['Track'].values:    #extracting values in header called Track from the file
+            track_data = self.music_df[self.music_df['Track'] == track_name]   # if track meets the title called track_name 
+            return track_data     # getting track data
         else:
             return "Track not found."
 
@@ -36,13 +36,13 @@ class Yadrif:
         return "Shutting down Yadrif"
 
     def response(self, input_text):
-        for command in self.commands:
-            if command in input_text.lower():
-                return self.commands[command]()
-        return "Sorry, searching for other sources from the source."
+        for command in self.commands: #taking commands in self function 
+            if command in input_text.lower():  #taking input in lowercase for searching in the file
+                return self.commands[command]()  # excuting the self function commands
+        return "Sorry, searching in alternate source."
 
     def run(self):
-        print("Activating yadrif services")
+        print("Activating Y.A.D.R.I.F services")
         while True:
             user_input = input("You: ")
             respond = self.response(user_input)
