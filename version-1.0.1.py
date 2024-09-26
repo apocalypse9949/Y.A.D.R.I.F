@@ -11,13 +11,13 @@ class Yadrif:
             "music_info": self.get_music_info
         }
 
-        self.music_df = pd.read_csv('ClassicHit.csv')
+        self.music_df = pd.read_csv('ClassicHit.csv') # using panda to read the data from CSV data file
 
     def get_music_info(self):
-        track_name = input("Enter the track name: ").title()
-        if track_name in self.music_df['Track'].values:
-            track_data = self.music_df[self.music_df['Track'] == track_name]
-            return track_data
+        track_name = input("Enter the track name: ").title() #searching CSV file by header called title
+        if track_name in self.music_df['Track'].values: #extracting values in header called Track from the file
+            track_data = self.music_df[self.music_df['Track'] == track_name] # if track meets the title called track_name 
+            return track_data # getting track data
         else:
             return "Track not found."
 
