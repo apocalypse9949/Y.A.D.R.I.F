@@ -48,7 +48,7 @@ class Yadrif:
             respond = self.response(user_input)
             print(f"Y.A.D.R.I.F: {respond}")
             if user_input.lower() == "shutdown":
-                break
+                break 
 
 if __name__ == "__main__":
     assist = Yadrif()
