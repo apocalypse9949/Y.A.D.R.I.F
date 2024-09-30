@@ -25,7 +25,7 @@ class Yadrif:
         now = datetime.datetime.now()
         return now.strftime("The current time is %H:%M")
 
-    def get_date(self):
+    def get_date(self): 
         today = datetime.date.today()
         return today.strftime("Today is %B %d, %Y")
 
@@ -39,7 +39,7 @@ class Yadrif:
         for command in self.commands: #taking commands in self function 
             if command in input_text.lower():  #taking input in lowercase for searching in the file
                 return self.commands[command]()  # excuting the self function commands
-        return "Sorry, searching in alternate source."
+        return "Sorry, searching for an alternate source."
 
     def run(self):
         print("Activating Y.A.D.R.I.F services")
