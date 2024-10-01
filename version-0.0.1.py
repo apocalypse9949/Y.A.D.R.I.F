@@ -2,7 +2,7 @@
 import pandas as pd
 
 class Yadrif:
-    def __init__(self):
+    def __init__(self): 
         self.commands = {
             "time": self.get_time, 
             "date": self.get_date, 
