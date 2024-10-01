@@ -5,7 +5,7 @@ class Yadrif:
     def __init__(self):
         self.commands = {
             "time": self.get_time,
-            "date": self.get_date,
+            "date": self.get_date, 
             "hello": self.greet,
             "shutdown": self.shutdown, 
             "music_info": self.get_music_info
